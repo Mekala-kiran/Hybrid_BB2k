@@ -614,7 +614,7 @@ __global__ void BFCbyHashHybrid(unsigned int totalNodeNum, unsigned int nodenum_
 
 
 ll my_exact_hashmap_bfc(edge *d_Edges, int *d_adjLen, int *d_edgeOffset, int *d_edgeRow, int *d_nonZeroRow) {
-    const int blockSize = 32;
+    const int blockSize = 256;
     const int blockNum = 1920;
     const int nodenum_select = nodeNum;
 
